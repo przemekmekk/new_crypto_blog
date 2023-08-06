@@ -1,0 +1,17 @@
+{% load static %}
+  <div class="card blog__slide text-center">
+    <div class="blog__slide__img">
+    {% if i.image_slider %}
+      <img class="card-img rounded-0" src="{{ i.image_slider.url }}" alt="">
+    {% endif %}
+    </div>
+    <div class="blog__slide__content">
+      {% for tag in i.tag_list %}
+        {% if forloop.first %}
+      <a class="blog__slide__label" href="{% url 'post' i.slug %}"> {{ tag }} </a>
+        {% endif %}
+      {% endfor %}
+      <h3><a href="{% url 'post' i.slug %}">{{ i.title }}</a></h3>
+      <p>{{ i.days_since_publication }} days ago</p>
+    </div>
+  </div>

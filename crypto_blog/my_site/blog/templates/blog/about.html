@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_title %}
+    CryptoBlog - About
+{% endblock %}
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+{% endblock %}
+{% block nav-item %}
+            <ul class="nav navbar-nav menu_nav justify-content-center">
+              <li class="nav-item"><a class="nav-link" href="{% url 'start' %}">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'all-posts' %}">All posts</a></li>
+
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Category</a>
+
+                    <ul class="dropdown-menu">
+                        {% for tag in tags %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'category' tag.caption %}">{{ tag.caption|title }}</a></li>
+                        {% endfor %}
+                    </ul>
+
+              </li>
+              <li class="nav-item active"><a class="nav-link" href="">About</a><li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+{% endblock %}
+{% block content %}
+
+  <!--================ Hero sm banner start =================-->  
+  <section class="mb-30px">
+    <div class="container">
+      <div class="hero-banner hero-banner--sm">
+        <div class="hero-banner__content">
+          <h1>About me</h1>
+          <nav aria-label="breadcrumb" class="banner-breadcrumb">
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Hero sm banner end =================-->  
+
+
+  <!--================ Start Blog Post Area =================-->
+  <section class="blog-post-area section-margin">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+                <h2>Welcome to my cryptocurrency blog!</h2>
+                <p>I am an enthusiast who is passionate about the world of digital currencies and revolutionary blockchain technology. My mission is to provide you with the latest information, practical advice, and analyses in the field of cryptocurrencies, helping you understand and leverage the potential of this fascinating domain.</p>
+
+                <p>Why did I choose cryptocurrencies? Because I believe it is not just the future of finance but also transforming how people perceive and use money. Cryptocurrencies represent a new era where decentralization, transparency, and the reliability of blockchain technology are reshaping the traditional financial system.</p>
+
+                <p>I am an experienced expert from various fields, ranging from finance to technology, and I am driven by my passion for what I do. Together, we aim to share my knowledge, understanding, and analyses to help you navigate this rapidly evolving world of cryptocurrencies.</p>
+
+                <p>What can you expect from my blog? You will find articles on the latest trends in the world of cryptocurrencies, reviews of popular blockchain projects, updates on significant events in the industry, cryptocurrency trading platform reviews, and a wealth of practical tips for both beginners and seasoned investors.</p>
+
+                <p>I am committed to providing trustworthy, up-to-date, and valuable content. Every blog post is a result of thorough research and analysis. My blog is not just about providing information but also educating and raising awareness about the potential of cryptocurrencies in the future of finance.</p>
+
+                <p>I am delighted to have you join me on this journey through the world of cryptocurrencies. I encourage you to subscribe to my blog to stay updated with the latest posts. If you have any questions, suggestions, or specific topics you'd like to see covered on my blog, feel free to get in touch. I am here to help you deepen your knowledge of cryptocurrencies and embrace the future of finance.</p>
+
+                <p>Trust me, and together, let's embark on this fascinating world of cryptocurrencies!</p>
+
+                <p>Best regards,</p>
+                <h2>Przemek Mekk</h2>
+
+
+
+             </div>
+          </div>
+        </div>
+
+
+{% include "side.html" %}
+{% include "footer.html" %}
+	<!-- ================ contact section end ================= -->
+{% endblock %}

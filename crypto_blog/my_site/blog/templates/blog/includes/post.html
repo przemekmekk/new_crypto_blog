@@ -1,0 +1,71 @@
+{% load static %}
+{% if latest_post %}
+  <div class="single-recent-blog-post">
+    <div class="thumb">
+      <img class="img-fluid" src="{{ i.image.url }}" alt="">
+      <ul class="thumb-info">
+        <li><a><i class="ti-user"></i>{{ i.author }}</a></li>
+        <li><a><i class="ti-notepad"></i>{{ i.date }}</a></li>
+        <li><a><i class="ti-themify-favicon"></i>{{i.comments.count}} Comments</a></li>
+      </ul>
+    </div>
+    <div class="details mt-20">
+      <a href="{% url 'post' i.slug %}">
+        <h3>{{ i.title }}</h3>
+      </a>
+      <p class="tag-list-inline">Tag: {% for tag in i.tag_list %}
+              <a>{{ tag }}</a>
+          {% endfor %}</p>
+      <p>{{ i.excerpt }}</p>
+      <a class="button" href="{% url 'post' i.slug %}">Read More <i class="ti-arrow-right"></i></a>
+    </div>
+  </div>
+{% elif all_posts %}
+  <div class="col-md-6">
+    <div class="single-recent-blog-post card-view">
+      <div class="thumb">
+
+        {% if i.image_all_posts %}
+          <img class="card-img rounded-0" src="{{ i.image_all_posts.url }}" alt="">
+        {% endif %}
+        <ul class="thumb-info">
+
+<!--          <li><a href="#"><i class="ti-user"></i>{{ i.author }}</a></li>-->
+<!--          <li><a href="#"><i class="ti-themify-favicon"></i>2 Comments</a></li>-->
+        </ul>
+      </div>
+      <div class="details mt-20">
+          <a href="{% url 'post' i.slug %}">
+            <h3>{{ i.title }}</h3>
+          </a>
+        <p>{{ i.excerpt }}</p>
+        <a class="button" href="{% url 'post' i.slug %}">Read More <i class="ti-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+{% elif category_post %}
+  <div class="col-md-6">
+    <div class="single-recent-blog-post card-view">
+      <div class="thumb">
+
+        {% if i.image_all_posts %}
+          <img class="card-img rounded-0" src="{{ i.image_all_posts.url }}" alt="">
+        {% endif %}
+        <ul class="thumb-info">
+
+<!--          <li><a href="#"><i class="ti-user"></i>{{ i.author }}</a></li>-->
+<!--          <li><a href="#"><i class="ti-themify-favicon"></i>2 Comments</a></li>-->
+        </ul>
+      </div>
+      <div class="details mt-20">
+          <a href="{% url 'post' i.slug %}">
+            <h3>{{ i.title }}</h3>
+          </a>
+          <p>{{ i.excerpt }}</p>
+        <a class="button" href="{% url 'post' i.slug %}">Read More <i class="ti-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+

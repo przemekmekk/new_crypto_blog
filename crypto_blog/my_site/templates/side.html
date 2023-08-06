@@ -1,0 +1,68 @@
+{% load static %}
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script>
+                {% for msg in messages %}
+                    swal("{{ msg }}");
+                {% endfor %}
+            </script>
+          <!-- Start Blog Post Siddebar -->
+          <div class="col-lg-4 sidebar-widgets">
+              <div class="widget-wrap">
+                  <form action="{% url 'subscribe' %}" method="post">
+                    {% csrf_token %}
+                    <div class="single-sidebar-widget newsletter-widget">
+                      <h4 class="single-sidebar-widget__title">Newsletter</h4>
+                      <div class="form-group mt-30">
+                        <div class="col-autos">
+                          <input name="email_to_subscribe" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Enter email'">
+                        </div>
+                      </div>
+                      <button class="bbtns d-block mt-20 w-100" type="submit">Subcribe</button>
+                    </div>
+                  </form>
+
+
+                <div class="single-sidebar-widget post-category-widget">
+                  <h4 class="single-sidebar-widget__title">Category</h4>
+                  <ul class="cat-list mt-20">
+                  {% for tag in tags %}
+                    <li>
+                      <a href="{% url 'category' tag.caption %}" class="d-flex justify-content-between">
+                        <p>{{ tag.caption|title }}</p>
+                      </a>
+                    </li>
+                    {% endfor %}
+
+                  </ul>
+                </div>
+
+                <div class="single-sidebar-widget popular-post-widget">
+                  <h4 class="single-sidebar-widget__title">Popular Post</h4>
+                  <div class="popular-post-list">
+                    {% for post in popular_posts %}
+                    <div class="single-post-list">
+                      <div class="thumb">
+                          {% if post.image_side_popular_post %}
+                            <img class="card-img rounded-0" src="{{ post.image_side_popular_post.url }}" alt="">
+                          {% endif %}
+                        <ul class="thumb-info">
+                          <li>{{post.author}} | {{post.date}}</li>
+                        </ul>
+                      </div>
+                      <div class="details mt-20">
+                        <a href="{% url 'post' post.slug %}">
+                          <h6>{{post.title}}</h6>
+                        </a>
+                      </div>
+                    </div>
+                    {% endfor %}
+                   </div>
+                </div>
+              </div>
+            </div>
+          <!-- End Blog Post Siddebar -->
+        </div>
+    </section>
+    <!--================ End Blog Post Area =================-->
+  </main>
