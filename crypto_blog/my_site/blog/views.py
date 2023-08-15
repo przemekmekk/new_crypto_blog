@@ -51,7 +51,8 @@ class PostDetail(View):
             "comment_form": CommentForm(),
             "comments": post.comments.all().order_by("-id"),
             "tags": Tag.objects.all(),
-            "counts":post.comments.count()
+            "counts":post.comments.count(),
+            'popular_posts': Post.objects.all().order_by('-views')[:3]
         }
         return render(request, "blog/post-detail.html", context)
 

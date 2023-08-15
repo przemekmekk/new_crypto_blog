@@ -78,15 +78,55 @@
                 </div>
                 <p>{{ post.excerpt }}</p>
                 <p>{{ post.content }}</p>
+                {% if post.content_1 %}
                 <p>{{ post.content_1 }}</p>
+                {% endif %}
+                {% if post.link_1 %}
+                <p></p><a href="{{ post.link_1 }}">{{ post.link_1 }}</a></p>
+                {% endif %}
+
+                <p>
+                <ul>
+                    {% if post.list_elements_1 %}
+                    <li><strong>- {{ post.list_elements_1 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_2 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_3 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_4 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_5 }}</strong></li>
+                    {% endif %}
+                </ul>
+                </p>
+                {% if post.twitter_itr_description %}
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description }}
+                        <a href="{{ post.twitter_href_1 }}">{{ post.twitter_pic }}</a>
+                        </p>{{ post.twitter_nick }}
+                        <a href="{{ post.twitter_href_2 }}">{{ post.twitter_date }}
+                        </a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                {% endif %}
+
+
+
+                {% if post.content_2 %}
                 <p>{{ post.content_2 }}</p>
+                {% endif %}
+                {% if post.content_3 %}
                 <p>{{ post.content_3 }}</p>
+                {% endif %}
+                {% if post.content_4 %}
                 <p>{{ post.content_4 }}</p>
+                {% endif %}
+                {% if post.content_5 %}
                 <p>{{ post.content_5 }}</p>
+                {% endif %}
+                {% if post.content_6 %}
                 <p>{{ post.content_6 }}</p>
-           <blockquote class="blockquote">
-             <p class="mb-0">MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.</p>
-           </blockquote>
+                {% endif %}
+                {% if post.quote_1 %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{ post.quote_1 }}</p>
+                    </blockquote>
+                {% endif %}
            <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower</p>
            <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower</p>
                <div class="news_d_footer flex-column flex-sm-row">
