@@ -2,7 +2,7 @@
 {% if latest_post %}
   <div class="single-recent-blog-post">
     <div class="thumb">
-      <img class="img-fluid" src="{{ i.image.url }}" alt="">
+      <img class="img-fluid" src="{{ i.image_title.url }}" alt="">
       <ul class="thumb-info">
         <li><a><i class="ti-user"></i>{{ i.author }}</a></li>
         <li><a><i class="ti-notepad"></i>{{ i.date }}</a></li>
@@ -25,8 +25,8 @@
     <div class="single-recent-blog-post card-view">
       <div class="thumb">
 
-        {% if i.image_all_posts %}
-          <img class="card-img rounded-0" src="{{ i.image_all_posts.url }}" alt="">
+        {% if i.image_all_posts_360x340 %}
+          <img class="card-img rounded-0" src="{{ i.image_all_posts_360x340.url }}" alt="">
         {% endif %}
         <ul class="thumb-info">
 
@@ -48,8 +48,8 @@
     <div class="single-recent-blog-post card-view">
       <div class="thumb">
 
-        {% if i.image_all_posts %}
-          <img class="card-img rounded-0" src="{{ i.image_all_posts.url }}" alt="">
+        {% if i.image_all_posts_360x340 %}
+          <img class="card-img rounded-0" src="{{ i.image_all_posts_360x340.url }}" alt="">
         {% endif %}
         <ul class="thumb-info">
 

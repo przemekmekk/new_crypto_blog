@@ -56,7 +56,7 @@
       <div class="row">
         <div class="col-lg-8">
             <div class="main_blog_details">
-                <img class="img-fluid" src="{{ post.image.url }}" alt="">
+                <img class="img-fluid" src="{{ post.image_title.url }}" alt="">
                 <a href="#"><h4>{{ post.title }}</h4></a>
                 <div class="user_details">
                   <div class="float-left">
@@ -81,10 +81,23 @@
                 {% if post.content_1 %}
                 <p>{{ post.content_1 }}</p>
                 {% endif %}
-                {% if post.link_1 %}
-                <p></p><a href="{{ post.link_1 }}">{{ post.link_1 }}</a></p>
+                {% if post.content_1A %}
+                <p>{{ post.content_1A }}</p>
                 {% endif %}
-
+                {% if post.content_1B %}
+                <p>{{ post.content_1B }}</p>
+                {% endif %}
+                {% if post.content_1C %}
+                <p>{{ post.content_1C }}</p>
+                {% endif %}
+                {% if post.content_1D %}
+                <p>{{ post.content_1D }}</p>
+                {% endif %}
+                {% if post.link_1 %}
+                <p>
+                    <a href="{{ post.link_1 }}">{{ post.link_1 }}</a>
+                </p>
+                {% endif %}
                 <p>
                 <ul>
                     {% if post.list_elements_1 %}
@@ -96,40 +109,538 @@
                     {% endif %}
                 </ul>
                 </p>
-                {% if post.twitter_itr_description %}
-                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">
-                        {{ post.twitter_itr_description }}
-                        <a href="{{ post.twitter_href_1 }}">{{ post.twitter_pic }}</a>
-                        </p>{{ post.twitter_nick }}
-                        <a href="{{ post.twitter_href_2 }}">{{ post.twitter_date }}
-                        </a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                {% if post.twitter_itr_description_1 %}
+                    <center>
+                    <blockquote class="twitter-tweet">
+                      <p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description_1 }}
+                        <a href="{{ post.twitter_href_A1 }}">{{ post.twitter_pic_1 }}</a>
+                      </p>
+                      {{ post.twitter_nick_1 }}
+                      <a href="{{ post.twitter_href_A2 }}">{{ post.twitter_date_1 }}</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
                 {% endif %}
-
-
-
-                {% if post.content_2 %}
-                <p>{{ post.content_2 }}</p>
-                {% endif %}
-                {% if post.content_3 %}
-                <p>{{ post.content_3 }}</p>
-                {% endif %}
-                {% if post.content_4 %}
-                <p>{{ post.content_4 }}</p>
-                {% endif %}
-                {% if post.content_5 %}
-                <p>{{ post.content_5 }}</p>
-                {% endif %}
-                {% if post.content_6 %}
-                <p>{{ post.content_6 }}</p>
+                {% if post.image_in_post_1 %}
+                <div style="text-align: center;">
+                <p>
+                    <img class="img-fluid align='center'" src="{{ post.image_in_post_1.url }}" alt="">
+                </p>
+                </div>
                 {% endif %}
                 {% if post.quote_1 %}
                     <blockquote class="blockquote">
                         <p class="mb-0">{{ post.quote_1 }}</p>
                     </blockquote>
                 {% endif %}
-           <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower</p>
-           <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower</p>
-               <div class="news_d_footer flex-column flex-sm-row">
+                {% if post.content_2 %}
+                <p>{{ post.content_2 }}</p>
+                {% endif %}
+                {% if post.content_2A %}
+                <p>{{ post.content_2A }}</p>
+                {% endif %}
+                {% if post.content_2B %}
+                <p>{{ post.content_2B }}</p>
+                {% endif %}
+                {% if post.content_2C %}
+                <p>{{ post.content_2C }}</p>
+                {% endif %}
+                {% if post.content_2D %}
+                <p>{{ post.content_2D }}</p>
+                {% endif %}
+                {% if post.link_2 %}
+                <p>
+                    <a href="{{ post.link_2 }}">{{ post.link_2 }}</a>
+                </p>
+                {% endif %}
+                <p>
+                <ul>
+                    {% if post.list_elements_6 %}
+                    <li><strong>- {{ post.list_elements_6 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_7 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_8 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_9 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_10 }}</strong></li>
+                    {% endif %}
+                </ul>
+                </p>
+                {% if post.twitter_itr_description_2 %}
+                    <center>
+                    <blockquote class="twitter-tweet">
+                      <p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description_2 }}
+                        <a href="{{ post.twitter_href_B1 }}">{{ post.twitter_pic_2 }}</a>
+                      </p>
+                      {{ post.twitter_nick_2 }}
+                      <a href="{{ post.twitter_href_B2 }}">{{ post.twitter_date_2 }}</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
+                {% endif %}
+                {% if post.image_in_post_2 %}
+                <div style="text-align: center;">
+                <p>
+                    <img class="img-fluid align='center'" src="{{ post.image_in_post_2.url }}" alt="">
+                </p>
+                </div>
+                {% endif %}
+                {% if post.quote_2 %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{ post.quote_2 }}</p>
+                    </blockquote>
+                {% endif %}
+                {% if post.content_3 %}
+                <p>{{ post.content_3 }}</p>
+                {% endif %}
+                {% if post.content_3A %}
+                <p>{{ post.content_3A }}</p>
+                {% endif %}
+                {% if post.content_3B %}
+                <p>{{ post.content_3B }}</p>
+                {% endif %}
+                {% if post.content_3C %}
+                <p>{{ post.content_3C }}</p>
+                {% endif %}
+                {% if post.content_3D %}
+                <p>{{ post.content_3D }}</p>
+                {% endif %}
+                {% if post.link_3 %}
+                <p>
+                    <a href="{{ post.link_3 }}">{{ post.link_3 }}</a>
+                </p>
+                {% endif %}
+                <p>
+                <ul>
+                    {% if post.list_elements_11 %}
+                    <li><strong>- {{ post.list_elements_12 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_13 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_14 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_15 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_16 }}</strong></li>
+                    {% endif %}
+                </ul>
+                </p>
+                {% if post.twitter_itr_description_3 %}
+                    <center>
+                    <blockquote class="twitter-tweet">
+                      <p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description_3 }}
+                        <a href="{{ post.twitter_href_C1 }}">{{ post.twitter_pic_3 }}</a>
+                      </p>
+                      {{ post.twitter_nick_3 }}
+                      <a href="{{ post.twitter_href_C2 }}">{{ post.twitter_date_3 }}</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
+                {% endif %}
+                {% if post.image_in_post_3 %}
+                <div style="text-align: center;">
+                <p>
+                    <img class="img-fluid align='center'" src="{{ post.image_in_post_3.url }}" alt="">
+                </p>
+                </div>
+                {% endif %}
+                {% if post.quote_3 %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{ post.quote_3 }}</p>
+                    </blockquote>
+                {% endif %}
+                {% if post.content_4 %}
+                <p>{{ post.content_4 }}</p>
+                {% endif %}
+                {% if post.content_4A %}
+                <p>{{ post.content_4A }}</p>
+                {% endif %}
+                {% if post.content_4B %}
+                <p>{{ post.content_4B }}</p>
+                {% endif %}
+                {% if post.content_4C %}
+                <p>{{ post.content_4C }}</p>
+                {% endif %}
+                {% if post.content_4D %}
+                <p>{{ post.content_4D }}</p>
+                {% endif %}
+                {% if post.link_4 %}
+                <p>
+                    <a href="{{ post.link_4 }}">{{ post.link_4 }}</a>
+                </p>
+                {% endif %}
+                <p>
+                <ul>
+                    {% if post.list_elements_17 %}
+                    <li><strong>- {{ post.list_elements_18 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_19 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_20 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_21 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_22 }}</strong></li>
+                    {% endif %}
+                </ul>
+                </p>
+                {% if post.twitter_itr_description_4 %}
+                    <center>
+                    <blockquote class="twitter-tweet">
+                      <p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description_4 }}
+                        <a href="{{ post.twitter_href_D1 }}">{{ post.twitter_pic_4 }}</a>
+                      </p>
+                      {{ post.twitter_nick_4 }}
+                      <a href="{{ post.twitter_href_D2 }}">{{ post.twitter_date_4 }}</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
+                {% endif %}
+                {% if post.image_in_post_4 %}
+                <div style="text-align: center;">
+                <p>
+                    <img class="img-fluid align='center'" src="{{ post.image_in_post_4.url }}" alt="">
+                </p>
+                </div>
+                {% endif %}
+                {% if post.quote_4 %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{ post.quote_4 }}</p>
+                    </blockquote>
+                {% endif %}
+                {% if post.content_5 %}
+                <p>{{ post.content_5 }}</p>
+                {% endif %}
+                {% if post.content_5A %}
+                <p>{{ post.content_5A }}</p>
+                {% endif %}
+                {% if post.content_5B %}
+                <p>{{ post.content_5B }}</p>
+                {% endif %}
+                {% if post.content_5C %}
+                <p>{{ post.content_5C }}</p>
+                {% endif %}
+                {% if post.content_5D %}
+                <p>{{ post.content_5D }}</p>
+                {% endif %}
+                {% if post.link_5 %}
+                <p>
+                    <a href="{{ post.link_5 }}">{{ post.link_5 }}</a>
+                </p>
+                {% endif %}
+                <p>
+                <ul>
+                    {% if post.list_elements_23 %}
+                    <li><strong>- {{ post.list_elements_23 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_24 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_25 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_26 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_27 }}</strong></li>
+                    {% endif %}
+                </ul>
+                </p>
+                {% if post.twitter_itr_description_5 %}
+                    <center>
+                    <blockquote class="twitter-tweet">
+                      <p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description_5 }}
+                        <a href="{{ post.twitter_href_E1 }}">{{ post.twitter_pic_5 }}</a>
+                      </p>
+                      {{ post.twitter_nick_5 }}
+                      <a href="{{ post.twitter_href_E2 }}">{{ post.twitter_date_5 }}</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
+                {% endif %}
+                {% if post.image_in_post_5 %}
+                <div style="text-align: center;">
+                <p>
+                    <img class="img-fluid align='center'" src="{{ post.image_in_post_5.url }}" alt="">
+                </p>
+                </div>
+                {% endif %}
+                {% if post.quote_5 %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{ post.quote_5 }}</p>
+                    </blockquote>
+                {% endif %}
+                {% if post.content_6 %}
+                <p>{{ post.content_6 }}</p>
+                {% endif %}
+                {% if post.content_6A %}
+                <p>{{ post.content_6A }}</p>
+                {% endif %}
+                {% if post.content_6B %}
+                <p>{{ post.content_6B }}</p>
+                {% endif %}
+                {% if post.content_6C %}
+                <p>{{ post.content_6C }}</p>
+                {% endif %}
+                {% if post.content_6D %}
+                <p>{{ post.content_6D }}</p>
+                {% endif %}
+                {% if post.link_6 %}
+                <p>
+                    <a href="{{ post.link_6 }}">{{ post.link_6 }}</a>
+                </p>
+                {% endif %}
+                <p>
+                <ul>
+                    {% if post.list_elements_28 %}
+                    <li><strong>- {{ post.list_elements_28 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_29 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_30 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_31 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_32 }}</strong></li>
+                    {% endif %}
+                </ul>
+                </p>
+                {% if post.twitter_itr_description_6 %}
+                    <center>
+                    <blockquote class="twitter-tweet">
+                      <p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description_6 }}
+                        <a href="{{ post.twitter_href_F1 }}">{{ post.twitter_pic_6 }}</a>
+                      </p>
+                      {{ post.twitter_nick_6 }}
+                      <a href="{{ post.twitter_href_F2 }}">{{ post.twitter_date_6 }}</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
+                {% endif %}
+                {% if post.image_in_post_6 %}
+                <div style="text-align: center;">
+                <p>
+                    <img class="img-fluid align='center'" src="{{ post.image_in_post_6.url }}" alt="">
+                </p>
+                </div>
+                {% endif %}
+                {% if post.quote_6 %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{ post.quote_6 }}</p>
+                    </blockquote>
+                {% endif %}
+                {% if post.content_7 %}
+                <p>{{ post.content_7 }}</p>
+                {% endif %}
+                {% if post.content_7A %}
+                <p>{{ post.content_7A }}</p>
+                {% endif %}
+                {% if post.content_7B %}
+                <p>{{ post.content_7B }}</p>
+                {% endif %}
+                {% if post.content_7C %}
+                <p>{{ post.content_7C }}</p>
+                {% endif %}
+                {% if post.content_7D %}
+                <p>{{ post.content_7D }}</p>
+                {% endif %}
+                {% if post.link_7 %}
+                <p>
+                    <a href="{{ post.link_7 }}">{{ post.link_7 }}</a>
+                </p>
+                {% endif %}
+                <p>
+                <ul>
+                    {% if post.list_elements_33 %}
+                    <li><strong>- {{ post.list_elements_33 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_34 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_35 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_36 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_37 }}</strong></li>
+                    {% endif %}
+                </ul>
+                </p>
+                {% if post.twitter_itr_description_7 %}
+                    <center>
+                    <blockquote class="twitter-tweet">
+                      <p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description_7 }}
+                        <a href="{{ post.twitter_href_G1 }}">{{ post.twitter_pic_7 }}</a>
+                      </p>
+                      {{ post.twitter_nick_7 }}
+                      <a href="{{ post.twitter_href_G2 }}">{{ post.twitter_date_7 }}</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
+                {% endif %}
+                {% if post.image_in_post_7 %}
+                <div style="text-align: center;">
+                <p>
+                    <img class="img-fluid align='center'" src="{{ post.image_in_post_7.url }}" alt="">
+                </p>
+                </div>
+                {% endif %}
+                {% if post.quote_7 %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{ post.quote_7 }}</p>
+                    </blockquote>
+                {% endif %}
+                {% if post.content_8 %}
+                <p>{{ post.content_8 }}</p>
+                {% endif %}
+                {% if post.content_8A %}
+                <p>{{ post.content_8A }}</p>
+                {% endif %}
+                {% if post.content_8B %}
+                <p>{{ post.content_8B }}</p>
+                {% endif %}
+                {% if post.content_8C %}
+                <p>{{ post.content_8C }}</p>
+                {% endif %}
+                {% if post.content_8D %}
+                <p>{{ post.content_8D }}</p>
+                {% endif %}
+                {% if post.link_8 %}
+                <p>
+                    <a href="{{ post.link_8 }}">{{ post.link_8 }}</a>
+                </p>
+                {% endif %}
+                <p>
+                <ul>
+                    {% if post.list_elements_38 %}
+                    <li><strong>- {{ post.list_elements_38 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_39 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_40 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_41 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_42 }}</strong></li>
+                    {% endif %}
+                </ul>
+                </p>
+                {% if post.twitter_itr_description_8 %}
+                    <center>
+                    <blockquote class="twitter-tweet">
+                      <p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description_8 }}
+                        <a href="{{ post.twitter_href_H1 }}">{{ post.twitter_pic_8 }}</a>
+                      </p>
+                      {{ post.twitter_nick_8 }}
+                      <a href="{{ post.twitter_href_H2 }}">{{ post.twitter_date_8 }}</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
+                {% endif %}
+                {% if post.image_in_post_8 %}
+                <div style="text-align: center;">
+                <p>
+                    <img class="img-fluid align='center'" src="{{ post.image_in_post_8.url }}" alt="">
+                </p>
+                </div>
+                {% endif %}
+                {% if post.quote_8 %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{ post.quote_8 }}</p>
+                    </blockquote>
+                {% endif %}
+                {% if post.content_9 %}
+                <p>{{ post.content_9 }}</p>
+                {% endif %}
+                {% if post.content_9A %}
+                <p>{{ post.content_9A }}</p>
+                {% endif %}
+                {% if post.content_9B %}
+                <p>{{ post.content_9B }}</p>
+                {% endif %}
+                {% if post.content_9C %}
+                <p>{{ post.content_9C }}</p>
+                {% endif %}
+                {% if post.content_9D %}
+                <p>{{ post.content_9D }}</p>
+                {% endif %}
+                {% if post.link_9 %}
+                <p>
+                    <a href="{{ post.link_9 }}">{{ post.link_9 }}</a>
+                </p>
+                {% endif %}
+                <p>
+                <ul>
+                    {% if post.list_elements_43 %}
+                    <li><strong>- {{ post.list_elements_43 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_44 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_45 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_46 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_47 }}</strong></li>
+                    {% endif %}
+                </ul>
+                </p>
+                {% if post.twitter_itr_description_9 %}
+                    <center>
+                    <blockquote class="twitter-tweet">
+                      <p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description_9 }}
+                        <a href="{{ post.twitter_href_I1 }}">{{ post.twitter_pic_9 }}</a>
+                      </p>
+                      {{ post.twitter_nick_9 }}
+                      <a href="{{ post.twitter_href_I2 }}">{{ post.twitter_date_9 }}</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
+                {% endif %}
+                {% if post.image_in_post_9 %}
+                <div style="text-align: center;">
+                <p>
+                    <img class="img-fluid align='center'" src="{{ post.image_in_post_9.url }}" alt="">
+                </p>
+                </div>
+                {% endif %}
+                {% if post.quote_9 %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{ post.quote_9 }}</p>
+                    </blockquote>
+                {% endif %}
+                {% if post.content_10 %}
+                <p>{{ post.content_10 }}</p>
+                {% endif %}
+                {% if post.content_10A %}
+                <p>{{ post.content_10A }}</p>
+                {% endif %}
+                {% if post.content_10B %}
+                <p>{{ post.content_10B }}</p>
+                {% endif %}
+                {% if post.content_10C %}
+                <p>{{ post.content_10C }}</p>
+                {% endif %}
+                {% if post.content_10D %}
+                <p>{{ post.content_10D }}</p>
+                {% endif %}
+                {% if post.link_10 %}
+                <p>
+                    <a href="{{ post.link_10 }}">{{ post.link_10 }}</a>
+                </p>
+                {% endif %}
+                <p>
+                <ul>
+                    {% if post.list_elements_48 %}
+                    <li><strong>- {{ post.list_elements_48 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_49 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_50 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_51 }}</strong></li>
+                    <li><strong>- {{ post.list_elements_52 }}</strong></li>
+                    {% endif %}
+                </ul>
+                </p>
+                {% if post.twitter_itr_description_10 %}
+                    <center>
+                    <blockquote class="twitter-tweet">
+                      <p lang="en" dir="ltr">
+                        {{ post.twitter_itr_description_10 }}
+                        <a href="{{ post.twitter_href_J1 }}">{{ post.twitter_pic_10 }}</a>
+                      </p>
+                      {{ post.twitter_nick_10 }}
+                      <a href="{{ post.twitter_href_J2 }}">{{ post.twitter_date_10 }}</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </center>
+                {% endif %}
+                {% if post.image_in_post_10 %}
+                <div style="text-align: center;">
+                <p>
+                    <img class="img-fluid align='center'" src="{{ post.image_in_post_10.url }}" alt="">
+                </p>
+                </div>
+                {% endif %}
+                {% if post.quote_10 %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{ post.quote_10 }}</p>
+                    </blockquote>
+                {% endif %}
+
+
+                <div class="news_d_footer flex-column flex-sm-row">
                  <a href="#comments-area"><span class="align-middle mr-2"><i class="ti-themify-favicon"></i></span>{{counts}} Comments</a>
 <!--                 <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="#comments-area"><span class="align-middle mr-2"><i class="ti-themify-favicon"></i></span>06 Comments</a>-->
                  <div class="news_socail ml-sm-auto mt-sm-0 mt-2">

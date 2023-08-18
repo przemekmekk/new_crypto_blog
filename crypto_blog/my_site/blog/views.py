@@ -22,7 +22,7 @@ class Start(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        data = queryset[:4]
+        data = queryset[:5]
         return data
 
     def get_context_data(self, **kwargs):

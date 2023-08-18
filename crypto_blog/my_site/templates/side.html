@@ -43,8 +43,8 @@
                     {% for post in popular_posts %}
                     <div class="single-post-list">
                       <div class="thumb">
-                          {% if post.image_side_popular_post %}
-                            <img class="card-img rounded-0" src="{{ post.image_side_popular_post.url }}" alt="">
+                          {% if post.image_side_popular_post_300x138 %}
+                            <img class="card-img rounded-0" src="{{ post.image_side_popular_post_300x138.url }}" alt="">
                           {% endif %}
                         <ul class="thumb-info">
                           <li>{{post.author}} | {{post.date}}</li>
