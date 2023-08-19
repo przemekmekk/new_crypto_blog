@@ -118,11 +118,11 @@ def subscribe(request):
     # email_to_subscribe = request.POST.get('email_to_subscribe')
 
     if SubscribedUsers.objects.filter(email=email).first():
-        messages.success(request, "This email was subscribed before...")
+        messages.success(request, "Your email has already been subscribed...")
     else:
         newsletter = SubscribedUsers(email=email, created_date=now)
         newsletter.save()
-        messages.success(request, "Your email is subscribed!")
+        messages.success(request, "Your email has been subscribed!")
 
     # Przekierowanie na stronę kategorii
     return redirect(request.META.get('HTTP_REFERER', reverse('start')))
@@ -144,5 +144,5 @@ def send_message(request):
         )
         messages.success(request, "Message has been sent!")
     else:
-        messages.success(request, "You have to fill the whole information!")
+        messages.success(request, "You must complete all fields!")
     return redirect(request.META.get("HTTP_REFERRER",reverse('contact')))
