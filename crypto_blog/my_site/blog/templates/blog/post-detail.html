@@ -69,7 +69,7 @@
                     </div>
                   </div>
                 </div>
-                <p>{{ post.excerpt }}</p>
+                <p><strong>{{ post.excerpt }}</strong></p>
                 <p>{{ post.content }}</p>
                 {% if post.content_1 %}
                 <p>{{ post.content_1 }}</p>
@@ -98,13 +98,13 @@
                 </p>
                 {% endif %}
                 <p>
-                <ul>
+                <ul class="my-unique-list">
                     {% if post.list_elements_1 %}
-                    <li><strong>- {{ post.list_elements_1 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_2 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_3 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_4 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_5 }}</strong></li>
+                    <li><strong>{{ post.list_elements_1.split|first }} </strong>{{ post.list_elements_1.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_2.split|first }} </strong>{{ post.list_elements_2.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_3.split|first }} </strong>{{ post.list_elements_3.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_4.split|first }} </strong>{{ post.list_elements_4.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_5.split|first }} </strong>{{ post.list_elements_5.split|slice:"1:"|join:"  " }}</li>
                     {% endif %}
                 </ul>
                 </p>
@@ -163,13 +163,13 @@
                 </p>
                 {% endif %}
                 <p>
-                <ul>
+                <ul class="my-unique-list">
                     {% if post.list_elements_6 %}
-                    <li><strong>- {{ post.list_elements_6 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_7 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_8 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_9 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_10 }}</strong></li>
+                    <li><strong>{{ post.list_elements_6.split|first }} </strong>{{ post.list_elements_6.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_7.split|first }} </strong>{{ post.list_elements_7.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_8.split|first }} </strong>{{ post.list_elements_8.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_9.split|first }} </strong>{{ post.list_elements_9.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_10.split|first }} </strong>{{ post.list_elements_10.split|slice:"1:"|join:"  " }}</li>
                     {% endif %}
                 </ul>
                 </p>
@@ -228,13 +228,13 @@
                 </p>
                 {% endif %}
                 <p>
-                <ul>
+                <ul class="my-unique-list">
                     {% if post.list_elements_11 %}
-                    <li><strong>- {{ post.list_elements_12 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_13 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_14 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_15 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_16 }}</strong></li>
+                    <li><strong>{{ post.list_elements_11.split|first }} </strong>{{ post.list_elements_11.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_12.split|first }} </strong>{{ post.list_elements_12.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_13.split|first }} </strong>{{ post.list_elements_13.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_14.split|first }} </strong>{{ post.list_elements_14.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_15.split|first }} </strong>{{ post.list_elements_15.split|slice:"1:"|join:"  " }}</li>
                     {% endif %}
                 </ul>
                 </p>
@@ -293,13 +293,13 @@
                 </p>
                 {% endif %}
                 <p>
-                <ul>
+                <ul class="my-unique-list">
                     {% if post.list_elements_17 %}
-                    <li><strong>- {{ post.list_elements_18 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_19 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_20 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_21 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_22 }}</strong></li>
+                    <li><strong>{{ post.list_elements_17.split|first }} </strong>{{ post.list_elements_17.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_18.split|first }} </strong>{{ post.list_elements_18.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_19.split|first }} </strong>{{ post.list_elements_19.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_20.split|first }} </strong>{{ post.list_elements_20.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_21.split|first }} </strong>{{ post.list_elements_21.split|slice:"1:"|join:"  " }}</li>
                     {% endif %}
                 </ul>
                 </p>
@@ -358,13 +358,13 @@
                 </p>
                 {% endif %}
                 <p>
-                <ul>
+                <ul class="my-unique-list">
                     {% if post.list_elements_23 %}
-                    <li><strong>- {{ post.list_elements_23 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_24 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_25 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_26 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_27 }}</strong></li>
+                    <li><strong>{{ post.list_elements_23.split|first }} </strong>{{ post.list_elements_23.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_24.split|first }} </strong>{{ post.list_elements_24.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_25.split|first }} </strong>{{ post.list_elements_25.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_26.split|first }} </strong>{{ post.list_elements_26.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_27.split|first }} </strong>{{ post.list_elements_27.split|slice:"1:"|join:"  " }}</li>
                     {% endif %}
                 </ul>
                 </p>
@@ -423,13 +423,13 @@
                 </p>
                 {% endif %}
                 <p>
-                <ul>
+                <ul class="my-unique-list">
                     {% if post.list_elements_28 %}
-                    <li><strong>- {{ post.list_elements_28 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_29 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_30 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_31 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_32 }}</strong></li>
+                    <li><strong>{{ post.list_elements_28.split|first }} </strong>{{ post.list_elements_28.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_29.split|first }} </strong>{{ post.list_elements_29.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_30.split|first }} </strong>{{ post.list_elements_30.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_31.split|first }} </strong>{{ post.list_elements_31.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_32.split|first }} </strong>{{ post.list_elements_32.split|slice:"1:"|join:"  " }}</li>
                     {% endif %}
                 </ul>
                 </p>
@@ -488,13 +488,13 @@
                 </p>
                 {% endif %}
                 <p>
-                <ul>
+                <ul class="my-unique-list">
                     {% if post.list_elements_33 %}
-                    <li><strong>- {{ post.list_elements_33 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_34 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_35 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_36 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_37 }}</strong></li>
+                    <li><strong>{{ post.list_elements_33.split|first }} </strong>{{ post.list_elements_33.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_34.split|first }} </strong>{{ post.list_elements_34.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_35.split|first }} </strong>{{ post.list_elements_35.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_36.split|first }} </strong>{{ post.list_elements_36.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_37.split|first }} </strong>{{ post.list_elements_37.split|slice:"1:"|join:"  " }}</li>
                     {% endif %}
                 </ul>
                 </p>
@@ -553,13 +553,13 @@
                 </p>
                 {% endif %}
                 <p>
-                <ul>
+                <ul class="my-unique-list">
                     {% if post.list_elements_38 %}
-                    <li><strong>- {{ post.list_elements_38 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_39 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_40 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_41 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_42 }}</strong></li>
+                    <li><strong>{{ post.list_elements_38.split|first }} </strong>{{ post.list_elements_38.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_39.split|first }} </strong>{{ post.list_elements_39.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_40.split|first }} </strong>{{ post.list_elements_40.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_41.split|first }} </strong>{{ post.list_elements_41.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_42.split|first }} </strong>{{ post.list_elements_42.split|slice:"1:"|join:"  " }}</li>
                     {% endif %}
                 </ul>
                 </p>
@@ -618,13 +618,13 @@
                 </p>
                 {% endif %}
                 <p>
-                <ul>
+                <ul class="my-unique-list">
                     {% if post.list_elements_43 %}
-                    <li><strong>- {{ post.list_elements_43 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_44 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_45 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_46 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_47 }}</strong></li>
+                    <li><strong>{{ post.list_elements_43.split|first }} </strong>{{ post.list_elements_43.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_44.split|first }} </strong>{{ post.list_elements_44.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_45.split|first }} </strong>{{ post.list_elements_45.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_46.split|first }} </strong>{{ post.list_elements_46.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_47.split|first }} </strong>{{ post.list_elements_47.split|slice:"1:"|join:"  " }}</li>
                     {% endif %}
                 </ul>
                 </p>
@@ -683,13 +683,13 @@
                 </p>
                 {% endif %}
                 <p>
-                <ul>
+                <ul class="my-unique-list">
                     {% if post.list_elements_48 %}
-                    <li><strong>- {{ post.list_elements_48 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_49 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_50 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_51 }}</strong></li>
-                    <li><strong>- {{ post.list_elements_52 }}</strong></li>
+                    <li><strong>{{ post.list_elements_48.split|first }} </strong>{{ post.list_elements_48.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_49.split|first }} </strong>{{ post.list_elements_49.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_50.split|first }} </strong>{{ post.list_elements_50.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_51.split|first }} </strong>{{ post.list_elements_51.split|slice:"1:"|join:"  " }}</li>
+                    <li><strong>{{ post.list_elements_52.split|first }} </strong>{{ post.list_elements_52.split|slice:"1:"|join:"  " }}</li>
                     {% endif %}
                 </ul>
                 </p>
